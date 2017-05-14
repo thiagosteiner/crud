@@ -1,0 +1,26 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.steiner"
+    },
+    "jhipsterVersion": "4.2.0",
+    "baseName": "crud",
+    "packageName": "com.steiner",
+    "packageFolder": "com/steiner",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "hibernateCache": "no",
+    "clusteredHttpSession": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSocialSignIn": false,
+    "jwtSecretKey": "dc40829612c4bb1d3237f06776d1341b47123fd2",
+    "enableTranslation": false
+  }
+}
