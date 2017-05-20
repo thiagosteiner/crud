@@ -7,8 +7,15 @@ services:
             - SPRING_DATA_MONGODB_URI=mongodb://crud-mongodb:27017
             - SPRING_DATA_MONGODB_DATABASE=crud
             - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+            - SECURITY_REQUIRE_SSL=true
+            - SERVER_SSL_KEY_STORE=/keystore/keystore.p12
+            - SERVER_SSL_KEY_STORE_PASSWORD=ssl123
+            - SERVER_SSL_KEYSTORETYPE=PKCS12
+            - SERVER_SSL_KEYALIAS=crud
+        volumes:
+             - /home/steiner/Projects/crud/keystore/:/keystore
         ports:
-            - 8080:8080
+            - 443:443
     crud-mongodb:
         extends:
             file: mongodb.yml

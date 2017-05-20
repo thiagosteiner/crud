@@ -7,7 +7,7 @@
     "baseName": "crud",
     "packageName": "com.steiner",
     "packageFolder": "com/steiner",
-    "serverPort": "8080",
+    "serverPort": "443",
     "authenticationType": "jwt",
     "hibernateCache": "no",
     "clusteredHttpSession": false,

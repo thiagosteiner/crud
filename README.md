@@ -1,6 +1,54 @@
 # crud
 This application was generated using JHipster 4.2.0, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v4.2.0](https://jhipster.github.io/documentation-archive/v4.2.0).
 
+As this is a toy example, there are all configuration files and also one JWT token in my configs. This way other people can run locally with minor problems.
+    For security reasons, do not place your security info on public repositories.
+    If you use this project on production, please change JWT token and all passwords in configuration files. 
+
+This configuration enforces the use of HTTPS and port 443.
+
+Please create a keystore.12 and place it under the folder /keystore and place this folder inside your project's root directory.
+
+Follow instructions in application-prod.yml to generate your keystore.12 and set your password on this file.
+
+Please build for production and use docker compose for running app and MongoDB. As described bellow, 
+build using:
+    
+    ./mvnw package -Pprod docker:build
+
+and then run:
+    
+    docker-compose -f src/main/docker/app.yml up -d
+
+Your swagger API documentations are available in:
+
+    https://localhost:443/v2/api-docs/
+
+There is also a swagger.json static file on this git respository root directory if you prefer.
+
+Please use:
+
+    http://editor.swagger.io/#/ 
+
+to read the docs in a pretty interface (upload a json file to editor as CORS will not be enabled by default)
+
+As there is JWT auth please authenticate in:
+
+    https://localhost:443/api/authenticate
+
+Default auth for admin are:
+    
+    {"password": "admin", "username": "admin"}
+
+Send POST and receive JWT. All interaction with API use Authorization header with value Bearer followed by JWT token.
+
+I created an entity called MyEntity, use:
+
+     https://localhost:443/api/my-entities
+
+and directions in swagger docs. (MyEntity id is self incremented by MongoDB so do not set it when creating a new entity).
+
+
 ## Development
 
 To start your application in the dev profile, simply run:

@@ -76,13 +76,13 @@ jhipster:
     swagger:
         default-include-pattern: /api/.*
         title: crud API
-        description: crud API documentation
+        description: Documentation for crud REST API with JWT Authentication and MongoDB
         version: 0.0.1
         terms-of-service-url:
-        contact-name:
-        contact-url:
-        contact-email:
-        license:
+        contact-name: Thiago Steiner Alfeu
+        contact-url: https://about.me/thiagosteiner
+        contact-email: thiagosteiner@gmail.com
+        license: MIT License 
         license-url:
     ribbon:
         display-on-active-profiles: dev
